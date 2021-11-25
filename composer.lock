@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9a68ff4d08596d4259cf9caf6bfd6f17",
+    "content-hash": "2911664f468a1756e6ef02f3e608cd1f",
     "packages": [
         {
             "name": "ajthinking/archetype",
@@ -4310,17 +4310,11 @@
         },
         {
             "name": "statamic/cms",
-            "version": "v3.2.24",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/statamic/cms.git",
-                "reference": "3f606e66929e093b03d9155188159b424333de00"
-            },
+            "version": "3.2.x-dev",
             "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/statamic/cms/zipball/3f606e66929e093b03d9155188159b424333de00",
-                "reference": "3f606e66929e093b03d9155188159b424333de00",
-                "shasum": ""
+                "type": "path",
+                "url": "/Users/marco/localweb/statamic-core",
+                "reference": "e0a075b5b7be600370711e4ac3709fceab84209e"
             },
             "require": {
                 "ajthinking/archetype": "^0.2.5",
@@ -4375,7 +4369,12 @@
                     "src/helpers.php"
                 ]
             },
-            "notification-url": "https://packagist.org/downloads/",
+            "autoload-dev": {
+                "psr-4": {
+                    "Tests\\": "tests",
+                    "Foo\\Bar\\": "tests/Fixtures/Addon"
+                }
+            },
             "license": [
                 "proprietary"
             ],
@@ -4386,17 +4385,9 @@
                 "laravel",
                 "statamic"
             ],
-            "support": {
-                "issues": "https://github.com/statamic/cms/issues",
-                "source": "https://github.com/statamic/cms/tree/v3.2.24"
-            },
-            "funding": [
-                {
-                    "url": "https://github.com/statamic",
-                    "type": "github"
-                }
-            ],
-            "time": "2021-11-24T20:28:27+00:00"
+            "transport-options": {
+                "relative": false
+            }
         },
         {
             "name": "statamic/stringy",
@@ -10185,7 +10176,9 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "statamic/cms": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
